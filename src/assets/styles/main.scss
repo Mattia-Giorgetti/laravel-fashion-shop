@@ -1,0 +1,119 @@
+@use './partials/_variables.scss' as *;
+
+$fa-font-path: '../webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+@import 'bootstrap/scss/bootstrap';
+
+// Comfortaa light 300  regular 400 medim 500 semi bold 600 bold 700 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/**************************
+    RESET
+***************************/
+body{
+    background-color: $mk_white;
+    font-family: 'Comfortaa', cursive;
+}
+::-webkit-scrollbar{
+    width: 1.2em;
+}
+::-webkit-scrollbar-track{
+   background: $mk_bg_mint;
+}
+::-webkit-scrollbar-thumb{
+//    background: $mk_txt_light_gray;
+   background: linear-gradient( #bba12b, #87751f);
+   border-radius: 25vw;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #d3b730;
+}
+*, 
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+.debug{
+    border: 1px solid red;
+}
+/**************************
+   GENERAL
+***************************/
+.mk_container{
+    width: 80%;
+    margin: 0 auto;
+}
+h1{
+    color: $mk_white;
+    font-weight: 700;
+    font-size: 4.5rem;
+    padding-top: .8rem;
+}
+h2{
+    color: $mk_txt_dark_gray;
+    font-weight: 700;
+    font-size: 4rem;
+}
+h3{
+    color: $mk_txt_dark_gray;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+}
+p{
+    color: $mk_txt_light_gray;
+    line-height: 2;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: $mk_txt_dark_gray;
+    font-size: .95rem;
+}
+a:hover{
+    color: $mk_txt_light_gray;
+}
+.mk_btn{
+    width: 220px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    background-color: $mk_txt_dark_gray;
+    color: $mk_white;
+    border: 4px solid $mk_white;
+    border-radius: 50px;
+    padding: .5rem 0;
+    transition: all 450ms ease-in-out;
+
+
+    &:hover{
+        color: $mk_txt_dark_gray;
+        border: 4px solid $mk_txt_dark_gray;
+        background-color: $mk_white;
+        font-weight: 700;
+        // transform: scale(1.1);
+    }
+}
+
+// CLASSI PER EFFETTO DI ENTRATA ELEMENTI PAGINA
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-30%);
+  }
+  .showing {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
